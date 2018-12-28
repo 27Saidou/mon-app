@@ -1,0 +1,12 @@
+<div class="container">
+<div class="row">
+  <div class="col-xs-12">
+      <img style="max-width:400px;" *ngIf="book.photo" [src]="book.photo">
+    <h1>{{ book.title }}</h1>
+    <h3>{{ book.author }}</h3>
+    <p style="float:right;">{{ book.synopsis }}</p>
+  </div><hr/>
+ <img src="assets/images/image.jpg" alt="image charger" style="margin:15px;">
+ <button class="btn btn-primary" type="submit" style="float:right;">Louer</button>
+</div>
+</div>
