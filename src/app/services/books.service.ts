@@ -52,7 +52,7 @@ createNewBook(newBook: Book) {
 }
 /*cette methode permet de supprimer un livre */
 removeBook(book: Book) {
-  if(book.photo) {
+  if (book.photo) {
     const storageRef = firebase.storage().refFromURL(book.photo);
     storageRef.delete().then(
       () => {
@@ -65,7 +65,7 @@ removeBook(book: Book) {
   }
   const bookIndexToRemove = this.books.findIndex(
     (bookEl) => {
-      if(bookEl === book) {
+      if (bookEl === book) {
         return true;
       }
     }

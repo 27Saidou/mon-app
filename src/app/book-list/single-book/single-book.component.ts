@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Book } from 'src/app/models/Book.model';
 import { BooksService } from 'src/app/services/books.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-single-book',
@@ -13,7 +14,7 @@ export class SingleBookComponent implements OnInit {
   book: Book;
 
   constructor(private route: ActivatedRoute, private booksService: BooksService,
-              private router: Router) {}
+              private router: Router, private location: Location) {}
 
   ngOnInit() {
     this.book = new Book('', '');
@@ -25,7 +26,7 @@ export class SingleBookComponent implements OnInit {
     );
   }
 
-  onBack() {
-    this.router.navigate(['/books']);
-  }
+   onBack() {
+     this.router.navigate(['/books']);
+}  
 }
